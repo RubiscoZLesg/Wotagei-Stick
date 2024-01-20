@@ -33,6 +33,6 @@ https://space.bilibili.com/18416307?spm_id_from=333.1007.0.0 \
 ## 制作方法
 Gerber文件夹中有各个部分的Gerber文件，交付板厂就能直接打样，光棒灯板板厚要选`1.0mm`。 \
 Model文件夹中是外壳零件的STL文件，可直接3D打印。 \
-Frimware文件夹中是光棒的hex固件，使用`STC-ISP`烧录。 \
+Frimware文件夹中是光棒的hex固件，使用`STC-ISP`烧录，烧录时工作频率选择`24MHz`。 \
 Hardware文件夹中提供了立创EDA与AD（立创EDA导出的hh）两种PCB工程文件，方便各位查看。 \
 Sourse中存放了源码（waring: 注释不多），分别是`Keil`与`STM32CubeIDE`工程文件，仅供参考，如有更好的实现方法欢迎交流。
