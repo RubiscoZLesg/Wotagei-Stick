@@ -1,0 +1,6 @@
+../IPS/lcd_init.c:8:6:LCD_Writ_Bus	1
+../IPS/lcd_init.c:20:6:LCD_WR_DATA8	1
+../IPS/lcd_init.c:30:6:LCD_WR_DATA	1
+../IPS/lcd_init.c:41:6:LCD_WR_REG	1
+../IPS/lcd_init.c:54:6:LCD_Address_Set	1
+../IPS/lcd_init.c:98:6:LCD_Init	1

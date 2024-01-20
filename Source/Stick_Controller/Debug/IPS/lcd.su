@@ -1,0 +1,11 @@
+../IPS/lcd.c:12:6:LCD_Fill	32	static
+../IPS/lcd.c:44:6:LCD_DrawPoint	24	static
+../IPS/lcd.c:57:6:LCD_DrawLine	64	static
+../IPS/lcd.c:113:6:LCD_DrawRectangle	32	static
+../IPS/lcd.c:128:6:Draw_Circle	32	static
+../IPS/lcd.c:161:6:LCD_ShowChar	40	static
+../IPS/lcd.c:223:6:LCD_ShowString	56	static
+../IPS/lcd.c:238:10:mypow	24	static
+../IPS/lcd.c:256:6:LCD_ShowIntNum	48	static
+../IPS/lcd.c:288:6:LCD_ShowFloatNum1	56	static
+../IPS/lcd.c:315:6:LCD_ShowPicture	32	static

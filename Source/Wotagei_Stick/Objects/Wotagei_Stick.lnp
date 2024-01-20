@@ -1,0 +1,3 @@
+".\Objects\main.obj" 
+TO ".\Objects\Wotagei_Stick" 
+PRINT(".\Listings\Wotagei_Stick.m51") RAMSIZE(256) 

@@ -1,0 +1,6 @@
+../IPS/lcd_init.c:8:6:LCD_Writ_Bus	16	static
+../IPS/lcd_init.c:20:6:LCD_WR_DATA8	16	static
+../IPS/lcd_init.c:30:6:LCD_WR_DATA	16	static
+../IPS/lcd_init.c:41:6:LCD_WR_REG	16	static
+../IPS/lcd_init.c:54:6:LCD_Address_Set	24	static
+../IPS/lcd_init.c:98:6:LCD_Init	8	static

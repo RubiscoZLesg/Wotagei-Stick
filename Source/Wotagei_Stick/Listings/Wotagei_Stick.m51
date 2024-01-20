@@ -1,0 +1,322 @@
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                    01/20/2024  14:04:53  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.2.0, INVOKED BY:
+D:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\main.obj TO .\Objects\Wotagei_Stick PRINT (.\Listings\Wotagei_Stick.m51) RAMSIZE (
+>> 256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\Wotagei_Stick (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0005H     UNIT         ?DT?MAIN
+                    000DH     0013H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         _BIT_GROUP_
+                    0020H.1   0000H.7                *** GAP ***
+            IDATA   0021H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     0019H     UNIT         ?PR?UART1_INIT?MAIN
+            CODE    001FH     0001H     UNIT         ?PR?INT0_ISR?MAIN
+                    0020H     0003H                  *** GAP ***
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     009CH     UNIT         ?PR?_WS2812_RAND_COLOR?MAIN
+            CODE    00C2H     008CH     UNIT         ?C_C51STARTUP
+            CODE    014EH     0063H     UNIT         ?PR?MAIN?MAIN
+            CODE    01B1H     0043H     UNIT         ?PR?WS2812_SEND_BIT?MAIN
+            CODE    01F4H     0032H     UNIT         ?PR?UART1_ISR?MAIN
+            CODE    0226H     000DH     UNIT         ?PR?DELAY2000MS?MAIN
+            CODE    0233H     000AH     UNIT         ?C_INITSEG
+            CODE    023DH     0009H     UNIT         ?PR?DELAY300US?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\Wotagei_Stick (MAIN)
+
+
+SEGMENT                                BIT_GROUP 
+  +--> CALLED SEGMENT               START    LENGTH
+---------------------------------------------------
+?C_C51STARTUP                       -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                       -----    -----
+  +--> ?PR?UART1_INIT?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/20/2024  14:04:53  PAGE 2
+
+
+  +--> ?PR?DELAY2000MS?MAIN
+  +--> ?PR?_WS2812_RAND_COLOR?MAIN
+  +--> ?PR?DELAY300US?MAIN
+
+?PR?_WS2812_RAND_COLOR?MAIN         -----    -----
+  +--> ?PR?WS2812_SEND_BIT?MAIN
+
+?PR?WS2812_SEND_BIT?MAIN            0020H.0  0000H.1
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\Wotagei_Stick (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0093H         PUBLIC        P0M1
+  D:0092H         PUBLIC        P1M0
+  D:0096H         PUBLIC        P2M0
+  D:0091H         PUBLIC        P1M1
+  D:0080H         PUBLIC        P0
+  D:00B2H         PUBLIC        P3M0
+  D:0095H         PUBLIC        P2M1
+  D:0090H         PUBLIC        P1
+  D:0008H         PUBLIC        Gdat
+  D:00B4H         PUBLIC        P4M0
+  D:00B1H         PUBLIC        P3M1
+  D:00A0H         PUBLIC        P2
+  D:00CAH         PUBLIC        P5M0
+  D:00B3H         PUBLIC        P4M1
+  D:00B0H         PUBLIC        P3
+  D:00C9H         PUBLIC        P5M1
+  D:00C0H         PUBLIC        P4
+  D:00C8H         PUBLIC        P5
+  D:00E8H         PUBLIC        P6
+  B:00A8H.7       PUBLIC        EA
+  D:00F8H         PUBLIC        P7
+  D:0009H         PUBLIC        Rdat
+  D:00A8H         PUBLIC        IE
+  C:0226H         PUBLIC        Delay2000ms
+  B:00A8H.4       PUBLIC        ES
+  D:00B8H         PUBLIC        IP
+  B:0098H.0       PUBLIC        RI
+  D:000AH         PUBLIC        Rec_Cnt
+  D:00D8H         PUBLIC        CCON
+  C:014EH         PUBLIC        main
+  C:001FH         PUBLIC        INT0_Isr
+  D:0099H         PUBLIC        SBUF
+  D:0087H         PUBLIC        PCON
+  D:0098H         PUBLIC        SCON
+  B:00B0H.2       PUBLIC        P32
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  B:00B0H.3       PUBLIC        P33
+  B:00C8H.5       PUBLIC        P55
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/20/2024  14:04:53  PAGE 3
+
+
+  D:008EH         PUBLIC        AUXR
+  C:0026H         PUBLIC        _WS2812_Rand_Color
+  C:0006H         PUBLIC        Uart1_Init
+  B:00A8H.3       PUBLIC        ET1
+  B:00A8H.0       PUBLIC        EX0
+  D:008DH         PUBLIC        TH1
+  B:0088H.0       PUBLIC        IT0
+  D:008BH         PUBLIC        TL1
+  D:000BH         PUBLIC        Light_Flag
+  B:0088H.6       PUBLIC        TR1
+  C:01F4H         PUBLIC        Uart1_Isr
+  C:01B5H         PUBLIC        WS2812_Send_Bit
+  C:023DH         PUBLIC        Delay300us
+  D:00D0H         PUBLIC        PSW
+  D:000CH         PUBLIC        Bdat
+  D:0094H         PUBLIC        P0M0
+  -------         PROC          DELAY300US
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  -------         ENDDO         
+  C:023DH         LINE#         8
+  C:023DH         LINE#         9
+  C:023DH         LINE#         12
+  C:023FH         LINE#         13
+  C:0241H         LINE#         15
+  C:0241H         LINE#         16
+  C:0243H         LINE#         17
+  C:0245H         LINE#         18
+  -------         ENDPROC       DELAY300US
+  -------         PROC          DELAY2000MS
+  -------         DO            
+  D:0007H         SYMBOL        i
+  D:0006H         SYMBOL        j
+  D:0005H         SYMBOL        k
+  -------         ENDDO         
+  C:0226H         LINE#         20
+  C:0226H         LINE#         21
+  C:0226H         LINE#         24
+  C:0228H         LINE#         25
+  C:022AH         LINE#         26
+  C:022CH         LINE#         28
+  C:022CH         LINE#         30
+  C:022CH         LINE#         31
+  C:022EH         LINE#         32
+  C:0230H         LINE#         33
+  C:0232H         LINE#         34
+  -------         ENDPROC       DELAY2000MS
+  C:01B1H         SYMBOL        L?0041
+  -------         PROC          L?0040
+  -------         ENDPROC       L?0040
+  C:01B1H         SYMBOL        L?0041
+  -------         PROC          WS2812_SEND_BIT
+  B:0020H.0       SYMBOL        data_bit
+  C:01B5H         LINE#         36
+  C:01B5H         LINE#         37
+  C:01B5H         LINE#         38
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/20/2024  14:04:53  PAGE 4
+
+
+  C:01B8H         LINE#         39
+  C:01B8H         LINE#         40
+  C:01BAH         LINE#         41
+  C:01C1H         LINE#         42
+  C:01C8H         LINE#         43
+  C:01CFH         LINE#         44
+  C:01D1H         LINE#         45
+  C:01D1H         LINE#         46
+  C:01D3H         LINE#         48
+  C:01D3H         LINE#         49
+  C:01D5H         LINE#         50
+  C:01DCH         LINE#         51
+  C:01DEH         LINE#         52
+  C:01E5H         LINE#         53
+  C:01ECH         LINE#         54
+  C:01F3H         LINE#         55
+  C:01F3H         LINE#         56
+  -------         ENDPROC       WS2812_SEND_BIT
+  -------         PROC          _WS2812_RAND_COLOR
+  D:0007H         SYMBOL        r
+  D:0005H         SYMBOL        g
+  D:0003H         SYMBOL        b
+  C:0026H         LINE#         58
+  C:0026H         LINE#         59
+  C:0026H         LINE#         60
+  C:003FH         LINE#         61
+  C:005AH         LINE#         63
+  C:0073H         LINE#         64
+  C:008EH         LINE#         66
+  C:00A7H         LINE#         67
+  -------         ENDPROC       _WS2812_RAND_COLOR
+  -------         PROC          UART1_INIT
+  C:0006H         LINE#         70
+  C:0006H         LINE#         71
+  C:0006H         LINE#         72
+  C:0009H         LINE#         73
+  C:000CH         LINE#         74
+  C:000FH         LINE#         75
+  C:0012H         LINE#         76
+  C:0015H         LINE#         77
+  C:0018H         LINE#         78
+  C:001AH         LINE#         79
+  C:001CH         LINE#         80
+  C:001EH         LINE#         81
+  -------         ENDPROC       UART1_INIT
+  -------         PROC          MAIN
+  -------         DO            
+  D:0006H         SYMBOL        i
+  -------         ENDDO         
+  C:014EH         LINE#         83
+  C:014EH         LINE#         84
+  C:014EH         LINE#         87
+  C:0151H         LINE#         88
+  C:0153H         LINE#         89
+  C:0155H         LINE#         90
+  C:0157H         LINE#         91
+  C:0159H         LINE#         92
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/20/2024  14:04:53  PAGE 5
+
+
+  C:015BH         LINE#         93
+  C:015DH         LINE#         94
+  C:015FH         LINE#         95
+  C:0161H         LINE#         96
+  C:0163H         LINE#         97
+  C:0165H         LINE#         98
+  C:0167H         LINE#         100
+  C:0169H         LINE#         101
+  C:016BH         LINE#         103
+  C:016DH         LINE#         104
+  C:016FH         LINE#         106
+  C:0172H         LINE#         108
+  C:0174H         LINE#         110
+  C:0177H         LINE#         111
+  C:0178H         LINE#         113
+  C:0178H         LINE#         114
+  C:0178H         LINE#         115
+  C:017BH         LINE#         116
+  C:017BH         LINE#         117
+  C:017EH         LINE#         118
+  C:0181H         LINE#         119
+  C:0181H         LINE#         120
+  C:0184H         LINE#         121
+  C:0184H         LINE#         122
+  C:0184H         LINE#         124
+  C:0188H         LINE#         125
+  C:0188H         LINE#         126
+  C:018AH         LINE#         127
+  C:0196H         LINE#         128
+  C:0196H         LINE#         129
+  C:019FH         LINE#         130
+  C:01A2H         LINE#         131
+  C:01A4H         LINE#         132
+  C:01A7H         LINE#         133
+  C:01A9H         LINE#         135
+  C:01A9H         LINE#         136
+  C:01ABH         LINE#         137
+  C:01AEH         LINE#         138
+  C:01AFH         LINE#         139
+  C:01AFH         LINE#         140
+  -------         ENDPROC       MAIN
+  -------         PROC          INT0_ISR
+  C:001FH         LINE#         143
+  C:001FH         LINE#         146
+  -------         ENDPROC       INT0_ISR
+  -------         PROC          UART1_ISR
+  C:01F4H         LINE#         148
+  C:01F8H         LINE#         150
+  C:01FBH         LINE#         151
+  C:01FBH         LINE#         152
+  C:01FDH         LINE#         153
+  C:0209H         LINE#         154
+  C:0209H         LINE#         155
+  C:0209H         LINE#         156
+  C:020CH         LINE#         157
+  C:020EH         LINE#         158
+  C:0210H         LINE#         159
+BL51 BANKED LINKER/LOCATER V6.22.2.0                                                  01/20/2024  14:04:53  PAGE 6
+
+
+  C:0210H         LINE#         160
+  C:0213H         LINE#         161
+  C:0215H         LINE#         162
+  C:0217H         LINE#         163
+  C:0217H         LINE#         164
+  C:021AH         LINE#         165
+  C:021CH         LINE#         166
+  C:021EH         LINE#         167
+  C:021EH         LINE#         168
+  C:0221H         LINE#         169
+  C:0221H         LINE#         170
+  C:0221H         LINE#         172
+  C:0221H         LINE#         173
+  -------         ENDPROC       UART1_ISR
+  -------         ENDMOD        MAIN
+
+Program Size: data=14.1 xdata=0 code=579
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
